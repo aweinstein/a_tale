@@ -1,0 +1,3 @@
+Generate the results of table 1.
+
+Dependencies: gensim ($ pip install gensim).
