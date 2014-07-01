@@ -1,4 +1,3 @@
-
 """Class for computing the similarity between a document against a given
 document previously indexed using Vector Space Modelling, such as Latent
 Semantic Indexing (LSI) or Latent Dirchlet Allocation (LDA)."""
@@ -39,7 +38,7 @@ class LSI(object):
             raise FileError(lsi_fn)
 
         self.make_index(corpus_ind)
-        
+
     def make_index(self, corpus):
         text_filter = corpora.wikicorpus.filter_wiki(corpus)
         text = corpora.wikicorpus.tokenize(text_filter)
@@ -48,7 +47,7 @@ class LSI(object):
 
     def get_similarity(self, text):
         vec_lsi = self.get_lsi(text)
-        sims = self.index[vec_lsi] 
+        sims = self.index[vec_lsi]
         return sims
 
     def get_lsi(self, text):
@@ -76,5 +75,3 @@ if __name__ == '__main__':
     # We can also get the LSI representation of a text
     v_lsi = lsi.get_lsi(doc)
     v = sorted(v_lsi, key=lambda x: abs(x[1]), reverse=True)
-
-
