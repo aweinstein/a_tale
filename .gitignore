@@ -1,2 +1,8 @@
 *.pyc
+*.dict
+*.index
+*.lsi
+*.lsi.projection
+*.mm
+*.log
 gut/

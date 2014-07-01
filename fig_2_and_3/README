@@ -1,0 +1,18 @@
+Make figures 2 and 3 of the paper
+
+Dependencies:
+
+gensim ($pip install gensim)
+mwclient ($pip install mwclient)
+
+Create directory `results` before running the scripts
+
+Before creating the figures, we need to build the similarity models from
+wikipedia, using wikicorpus.py.
+
+Fig 2:
+-----
+$ python wiki_crawl.py 10 Army simple.wikipedia.org results/simplewiki
+
+Fig 3:
+-----
