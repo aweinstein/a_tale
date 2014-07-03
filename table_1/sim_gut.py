@@ -91,15 +91,14 @@ def compute_similarity(doc, dictionary, lsi, index):
 if __name__ == '__main__':
     dictionary = make_corpus_dict(reset=False)
     corpus = make_corpus(dictionary, reset=False)
-    lsi = make_lsi(dictionary, corpus, reset=True)
+    lsi = make_lsi(dictionary, corpus, reset=False)
     moby_dick_id = file_list.index('2701.txt')
-    index = make_index([corpus[moby_dick_id]], lsi, reset=True)
+    index = make_index([corpus[moby_dick_id]], lsi, reset=False)
     #index = make_index(corpus, lsi, reset= True)
-    
+
     from docs import docs
     print
     for doc, desc in docs[1:]:
         sim = compute_similarity(doc, dictionary, lsi, index)
         print '%s -> %f' % (desc, sim[0])
         pass
-    

@@ -18,7 +18,7 @@ class LSI(object):
     def __init__(self, corpus_ind, prefix):
         self.corpus_ind = corpus_ind
         fname = lambda sufix: prefix + sufix
-        wordid_fn = fname('_wordids.txt')
+        wordid_fn = fname('_wordids.txt.bz2')
         tfidf_fn = fname('_model.tfidf')
         lsi_fn = fname('_model.lsi')
         try:

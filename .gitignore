@@ -7,3 +7,6 @@
 *.log
 gut/
 *.pdf
+*.wiki
+*.gexf
+*.pickle
